@@ -1,0 +1,98 @@
+@font-face {
+    font-family: Alex Brush;
+    src: url(AlexBrush-Regular.ttf);
+}
+
+@font-face {
+    font-family: Reey;
+    src: url(Reey-Regular.otf);
+}
+
+#Titre {
+    border: 10px red dotted;
+    border-radius: 25%;
+    color: red;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#SIGNATURE{
+    font-family: reey;
+}
+
+html{
+    text-align: center;
+    background-color: blueviolet;
+}
+body{
+    margin-top: 0%;
+}
+
+header, footer{
+    border: solid 2px yellow;
+    background-color: red;
+    font-weight: bold;
+}
+
+aside{
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 0%;
+    float: right;
+    width: 10%;
+    top: 10%;
+}
+
+nav{
+    background-color: grey;
+    top: 10%;
+    position: fixed;
+    width: 10%; 
+}
+
+section{
+    border: solid thin black;
+    padding: 3%;
+    margin: 5%;
+    width: 70%;
+    margin-bottom: 2%;
+
+}
+
+h1{
+    text-align: left;
+}
+
+article{
+    border: 2px solid black;
+    margin: 1%;
+    padding: 1%;
+}
+
+#section2{
+    margin-left: 12%;;
+}
+#section1{
+    margin-left : 12%;
+    
+}
+
+#section3{
+    margin-left: 12%;
+}
+
+.chapitre{
+    float: left;
+    width: 30%;
+    height: 30%;
+    margin: 2%;
+}
+
+footer{
+    float: left;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+}
+

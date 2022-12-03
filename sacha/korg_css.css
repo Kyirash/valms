@@ -1,0 +1,120 @@
+html {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height:10mm;
+    
+}
+button{
+    
+}
+
+
+p.titre{
+    font-size: 28px;
+    color: blue;
+    
+}
+#korg{
+    width: 50%;
+    float: right;
+    padding-right: 1%;
+    padding-top: 1%;
+}
+
+header{
+    text-align: center;
+    font-size: 68px;
+    margin-bottom: 5%;
+    padding-top: 2%;
+    color: blue;
+}
+footer{
+    text-align: center;
+}
+hr{
+    size: 1;
+    width: 100%;
+    
+}
+
+#thoretkorg{
+    width: 80%;
+    padding-right: 1%;
+    
+}
+#apparition{
+    object-position : right;
+}
+
+body{
+    background-size: cover;
+}
+
+a:link {  /* lien non visité*/
+    color: black; /*bleu clair*/
+  
+  }
+  a:visited {  /*lien visité*/
+    color: gray;
+  } 
+  a:hover { /*lorsque le pointeur de la souris survole un lien*/
+    color: yellow;
+    font-style: italic;
+  }
+ 
+section{
+    border: 2px;
+    border: solid;
+    box-shadow: 10px 10px 10px gray;
+    border-color: blue;
+    margin-left: 160px; /* pour ne pas écrire sous la partie nav */
+    border: 2px solid blue;
+    padding-left: 10px;
+   
+}
+nav{
+    float: left;
+    width: 250px;
+    border: 2px solid blue;
+    padding-left: 1%;
+    box-shadow: 10px 10px 10px gray;
+}
+
+aside{
+    float: right;
+    width: 15%;
+    margin-right:%;
+    border: 2px solid blue;
+    padding-left: 1%;
+}
+#bio{
+    width: 60%;
+    margin: auto;
+}
+#power{
+    width: 60%;
+    margin: auto;
+    margin-top: 25px;
+}
+#relation{
+    width: 25%;
+    margin-left: 12.4%;
+}
+#apparition{
+    margin-left: 14.8%;
+    width: 25%;
+}
+#section_groupe{
+    margin-top: 25px;
+    
+    display:flex;
+    border-color: white;
+    box-shadow: none;
+}
+#anecdotes{
+    width: 60%;
+    margin: auto;
+    margin-top: 35px;
+}
+
+
