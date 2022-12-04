@@ -1,0 +1,86 @@
+html{
+	color: white;
+	font-weight: bold;
+	text-shadow: 1px 1px black;
+}
+table{
+	margin: auto;
+	border-width: 2px; 
+	border-color: white;
+	border-style: solid;
+	width: 75%;
+	height: 500px;
+	box-shadow: 2px 2px black;
+	border-radius: 10px ;
+}
+
+body{
+	background-image: url('marvel.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%
+}
+
+
+th{
+	border-bottom: 1px solid;
+}
+th.colonne {
+	
+	border-left: 1px solid;
+	height: 15%;
+	width:20%
+
+}
+.colonne1{
+	padding-bottom: 10%;
+}
+td.colonne{
+	border-left: 1px solid;
+	padding-bottom: 10%;
+}
+
+td.avatar{
+	border-left: 1px solid;
+	padding-bottom: 10%;
+}
+img{
+	width:95%
+}
+td{
+	text-align: center;
+}
+
+nav ul {
+	list-style:none;
+	padding:0px;
+	margin:0px;
+} /*pas de marge, pas de puce*/
+    
+nav ul li {
+	float:left;
+	padding:0px;
+	margin:0px;
+	padding-right:20px;
+} /*menu horizontal, espace séparateur 20px*/ 
+    
+nav ul li ul {
+	margin:0px; 
+	padding:0px; 
+	position:absolute; 
+	float:none; display:none;
+} /*pas d'affichage de sous-menu*/
+    
+nav ul li:hover ul {
+	display:block;
+}  /*élément menu survolé : afficher sous-menu, vertical*/
+    
+nav ul li ul li { 
+	margin:0px; 
+	padding:0px; 
+	float:none;
+} /*élément sous-menu vertical*/ 
+    
+nav ul li ul li a {
+	width:150px; 
+	display:block;
+} /*lien sous-menu : largeur élément 150px*/

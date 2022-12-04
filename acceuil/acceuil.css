@@ -1,0 +1,9 @@
+body{
+    background-image: url("marvel.jpg");
+    background-size: cover;
+    color: azure;
+}
+p{
+    text-align: center;
+    font-size: 25vh;
+}
