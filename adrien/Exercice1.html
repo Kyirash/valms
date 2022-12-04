@@ -69,6 +69,13 @@
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
     }
+    
+    if (prediction[0].probability.toFixed(2) < 0.3) {
+                    document.getElementById("myAudio").play();
+                }
+                else {
+                    document.getElementById("myAudio").pause();
+                }
 </script>
 
 
