@@ -1,30 +1,76 @@
-nav ul {list-style:none;padding:0px;margin:0px;} /*pas de marge, pas de puce*/
-nav ul li {float:left;padding:0px;margin:0px;padding-right:20px;} /*menu horizontal, espace séparateur 20px*/ 
-nav ul li ul {margin:0px; padding:0px; position:absolute; float:none; display:none;} /*pas d'affichage de sous-menu*/
-nav ul li:hover ul {display:block;}  /*élément menu survolé : afficher sous-menu, vertical*/
-nav ul li ul li { margin:0px; padding:0px; float:none;} /*élément sous-menu vertical*/ 
-nav ul li ul li a {width:150px; display:block;} /*lien sous-menu : largeur élément 150px*/
-
+body{
+    color:azure;
+    background-color: #2d2d2d;
+}
 .menu
 {
-    border-left: 70px;
-    border-style: solid;
-    border-color: grey;
-    background-color: grey;
+    padding: 0px 70px 0px 70px ;
+    background-color: #212124;
     font-style: normal;
-    opacity: 60%;
-    height: 20px;
+    height: 30px;
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 .subMenu
 {
-    border-left: 70px;
-    border-style: solid;
-    border-color: grey;
-    background-color: grey;
+    padding-left: 10px;
+    background-color: #212124 ;
     font-style: normal;
+    color: azure;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
+
 iframe{
-    height  : 100vh ;
     width   : 100%;
+    height: 87.7vh;
+    background-color: white;
 }
+
+h1{
+    text-align: center;
+    line-height: 1vh;
+}
+
+a:link {  /* lien non visité*/
+    color: azure;
+}
+a:visited {  /*lien visité*/
+    color: whitesmoke ;
+} 
+a:hover { /*lorsque le pointeur de la souris survole un lien*/
+    color:blue;
+    font-style: italic;
+}
+
+nav ul {
+    list-style:none;padding:0px;margin:0px;
+} /*pas de marge, pas de puce*/
+nav ul li {
+    float:left;padding:0px;margin:0px;padding-right:20px;
+} /*menu horizontal, espace séparateur 20px*/ 
+
+nav ul li ul {
+    margin:0px; padding:0px; position:absolute; float:none; display:none;
+} /*pas d'affichage de sous-menu*/
+
+nav ul li:hover ul {
+    display:block;
+}  /*élément menu survolé : afficher sous-menu, vertical*/
+
+nav ul li ul li { 
+    margin:0px; padding:0px; float:none;
+} /*élément sous-menu vertical*/ 
+
+nav ul li ul li a {
+    width:150px; display:block;
+} /*lien sous-menu : largeur élément 150px*/

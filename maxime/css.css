@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Andy';
+    src: url("Andy_Bold_0.ttf") format("truetype");
+    }
+
+body {
+    font-family: Andy ;
+    background-color: rgb(95, 95, 95);
+    color: aliceblue;
+}
+a:link {  /* lien non visité*/
+  color: whitesmoke;
+}
+a:visited {  /*lien visité*/
+  color: silver ;
+} 
+a:hover { /*lorsque le pointeur de la souris survole un lien*/
+  color:red;
+  font-style: italic;
+}
+
+header{
+	width: 100%;
+	top: 0vh;
+	left: 0vh;
+	position: fixed;
+	background-color: #2d2d2d;
+}
+h1{
+	text-align: center;
+	font-size: 25px;
+}
+
+header img{
+	float: right;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0vh;
+	right: 0vh;
+
+}
+.adulte{
+	float: left ;
+	margin-right: 5px ;
+}
+.ado{
+	width: 200px;
+	height: 300px;
+}
+.bebe{
+	width: 350px;
+	height: 200px;
+}
+button{
+	background-color: #2d2d2d;
+	border: 1px solid whitesmoke;
+	color: whitesmoke;
+	text-align: center;
+	border-radius: 5px;
+	margin: 0% 0px 0px 40% ;
+}
+
+aside{
+	border: 2px solid;
+	float: right;
+	width: 15%;
+	top: 120px;
+	box-shadow: 6px 6px 0px #2d2d2d;
+}
+
+
+nav{
+	border: 2px solid black;
+	float: left;
+	width: 10vh;
+	top: 90px;
+	height: 75vh;
+	padding-right: 2px;
+	box-shadow: 6px 6px 0px #2d2d2d;
+	position: fixed;
+	text-align: left;
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+div {
+	border : 2px solid transparent;
+	width : 70%;
+	display: grid;
+	grid-row: 2;
+	grid-template-columns: 1fr;
+	margin-top: 100px;
+	margin-bottom: 60px;
+	margin-left: auto;
+	margin-right: auto;
+}
+section{
+	top: 120px;
+	border: 2px solid;
+	margin: auto ;
+	margin-top: 30px;
+	box-shadow: 6px 6px 0px #2d2d2d;
+}
+.grid{
+	height: auto;
+	width: auto;
+}
+div div{
+	margin-top: 0px;
+	width: auto;
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+}
+
+footer{
+	width: 100%;
+	text-align: center;
+	line-height: 0px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background-color: #2d2d2d;
+}
+footer img{
+	width: 20px;
+	height: 20px;
+	bottom: 0ch;
+}
+footer article{
+	float:right;
+	margin: 10px 10px 10px 10px;
+	position: absolute;
+	bottom: 0vh;
+	right: 0vh;
+}

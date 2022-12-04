@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "Spider-Man";
+    src: url("/font/Spider-Man.ttf") format("truetype");
+}
+
+body {
+    font-family: "Spider-Man", Serif;
+}
+
+h2 {
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+
+.relationArticle {
+    display: inline-block;
+}
+
+.relation {
+    width: 40%;
+}
+
+.apparition{
+    width: 40%;
+}
+
+.box{
+    display: inline-flex;
+}
+
+header{
+    position: fixed;
+    float: top;
+    width: 6em
+}
+
+nav {
+    top: 20%;
+    position: fixed;
+    border: red;
+    border-style: solid;
+}
+
+section {
+    margin-left: 200px;
+    border: red;
+    border-style: solid;
+}
+
+img {
+    float: left;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+.Reco{
+    width: 500px;
+}
