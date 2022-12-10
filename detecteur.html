@@ -67,7 +67,7 @@
                       prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                   labelContainer.childNodes[i].innerHTML = classPrediction;
               }
-              if (prediction[0].probability.toFixed(2) < 0.3) {
+              if (prediction[0].probability.toFixed(2) > 0.3) {
                   document.getElementById("alarme").play();
               }
               else {
