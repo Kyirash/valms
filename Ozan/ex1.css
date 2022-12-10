@@ -1,0 +1,77 @@
+* 
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1
+{
+    text-align : center;
+    color: red;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    text-shadow: 2px 1px 1px black ;
+}
+h2
+{
+    color: red;
+    text-align: left;
+}
+img
+{
+    float: right;
+	margin-right: 10%;
+}
+nav
+{
+	background-color: lightgray;
+	position: fixed;
+}
+footer
+{
+	text-align: center;
+	color: red;
+	border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+section
+{
+	margin-top: 2%;
+	margin-left: 15%;
+	margin-right: 15%;
+	text-align: justify;
+	border: 1px;
+	border-color: black;
+	border-style: solid;
+}
+#section2
+{
+	margin: auto;
+	width: 45%;
+}
+#section3
+{
+	margin: auto;
+	width: 45%;
+	height: 50%;
+}
+article
+{
+	margin: 10px;
+	border: 1px;
+	border-color: black;
+	border-style: solid;
+	padding: 10px;
+}
+aside
+{
+	background-color:chartreuse;
+	width: 90px;
+	float: right;
+	margin-top: 15px;
+}
+#sectionG
+{
+	border: 0px;
+	display: flex;
+}
