@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Peter Parker : Spiderman</title>
+    <link rel="shortcut icon" href="spiderman_logo.png">
+    <body background="fond.jpg">
+</head>
+<body>
+    
+        <h1><FONT size="7pt"><center><police><u>L'incroyable histoire de l'araignée de New York City</u></police></center></FONT></h1>
+        <h2><FONT size="6pt"><center><police2>Peter Parker : L'enfant normal..</police2></center></FONT></h2>
+            <p>
+                <FONT size="5pt">
+                    <center>Peter Parker est le fils unique de Richard et Mary Parker. <br>Ses parents sont tués en travaillant sous couverture pour le gouvernement.</center><br>
+                    <center>Orphelin à l'âge de six ans, Peter est alors confié aux soins de son oncle et sa tante, Benjamin et May Parker.</center><br>
+                    <center>Il est scolarisé au <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/lieux/lycee-scientifique-et-technologique-de-midtown.html"><r>Lycée de Midtown</r></a>, dans le Queens à New York.</center><br> 
+                    <center>Il est peu populaire mais excelle à l'école, notamment en sciences. Il étudie aussi le français et l'espagnol.</center><br>
+                    <center>Il a le béguin pour Liz Allen qui, elle, aime Flash Thompson.</center>
+                </FONT>
+            </p>
+        
+        <h2><FONT size="6pt"><center><police2>Spider-Man : L'homme araignée..</police2></center></FONT></h2>
+            <p2><p1>
+                <FONT size="5pt">
+                    <center>Spider-Man possède une force surhumaine, une grande agilité,</center><br>
+                    <center>et la capacité de "coller" aux parois.</center><br>
+                    <center>Sa vocation de justicier sera donc de lutter contre le crime,</center><br>
+                    <center>et de suivre ainsi les paroles de son oncle défunt :</center><br>
+                    <center>"Un grand pouvoir implique de grandes responsabilités".</center>
+                </FONT>
+            </p1></p2> 
+        
+        <h2><FONT size="6pt"><police2>Vidéos de Spider-Man :</police2></FONT></h2>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=ZbAgfkznscg"><FONT size="5pt"><r>Spider-Man et Captain America</r></FONT></a></li>
+            <li><a href="https://www.youtube.com/watch?v=JBSv_18A0-4"><FONT size="5pt"><r>Spider-Man sauve Hulk</r></FONT></a></li>
+            <li><a href="https://www.youtube.com/watch?v=y6YN9Mw2iW0"><FONT size="5pt"><r>Compilation des meilleures moments de Spider-Man</r></FONT></a></li>
+            <img src="peter.jpg" alt="peter" width=10% height=10%/>
+        </ul>
+        <section class="Reco" id="reco">
+            <h2>Reconnaissance faciale</h2>
+            <button type="button" onclick="init()">Identifier</button>
+            <div id="webcam-container"></div>
+            <div id="label-container"></div>
+            <audio src="myAudio.mp3" id="myaudio"></audio>
+            <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+            <script>
+                // More API functions here:
+                // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+                // the link to your model provided by Teachable Machine export panel
+                const URL = "https://teachablemachine.withgoogle.com/models/FBuJCjo8E/";
+
+                let model, webcam, labelContainer, maxPredictions;
+
+                // Load the image model and setup the webcam
+                async function init() {
+                    const modelURL = URL + "model.json";
+                    const metadataURL = URL + "metadata.json";
+
+                    // load the model and metadata
+                    // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                    // or files from your local hard drive
+                    // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                    model = await tmImage.load(modelURL, metadataURL);
+                    maxPredictions = model.getTotalClasses();
+
+                    // Convenience function to setup a webcam
+                    const flip = true; // whether to flip the webcam
+                    webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+                    await webcam.setup(); // request access to the webcam
+                    await webcam.play();
+                    window.requestAnimationFrame(loop);
+
+                    // append elements to the DOM
+                    document.getElementById("webcam-container").appendChild(webcam.canvas);
+                    labelContainer = document.getElementById("label-container");
+                    for (let i = 0; i < maxPredictions; i++) { // and class labels
+                        labelContainer.appendChild(document.createElement("div"));
+                    }
+                }
+
+                async function loop() {
+                    webcam.update(); // update the webcam frame
+                    await predict();
+                    window.requestAnimationFrame(loop);
+                }
+
+                // run the webcam image through the image model
+                async function predict() {
+                    // predict can take in an image, video or canvas html element
+                    const prediction = await model.predict(webcam.canvas);
+                    for (let i = 0; i < maxPredictions; i++) {
+                        const classPrediction =
+                            prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                        labelContainer.childNodes[i].innerHTML = classPrediction;
+                    }
+                    if (prediction[0].probability.toFixed(2) < 0.3) {
+                        document.getElementById("myaudio").play();
+                    }
+                    else {
+                        document.getElementById("myaudio").pause();
+                    }
+                }
+            </script>
+        </section>
+</body>
+</html>
