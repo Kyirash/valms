@@ -25,6 +25,7 @@ nav
 {
 	background-color: lightgray;
 	position: fixed;
+	width: 150px;
 }
 footer
 {
@@ -74,4 +75,12 @@ aside
 {
 	border: 0px;
 	display: flex;
+}
+button
+{
+	margin-left: 48%;
+}
+div
+{
+	margin-left: 47%;
 }
