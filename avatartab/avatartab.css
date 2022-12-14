@@ -17,18 +17,20 @@ table{
 body{
 	background-image: url('marvel.jpg');
 	background-repeat: no-repeat;
-	background-size: 100%
+	background-size: 100%;
 }
 
 
 th{
 	border-bottom: 1px solid;
+	width:16%;
+	
 }
 th.colonne {
 	
 	border-left: 1px solid;
 	height: 15%;
-	width:20%
+	
 
 }
 .colonne1{
@@ -44,10 +46,11 @@ td.avatar{
 	padding-bottom: 10%;
 }
 img{
-	width:95%
+	width:75%
 }
 td{
 	text-align: center;
+	
 }
 
 nav ul {
@@ -59,8 +62,8 @@ nav ul {
 nav ul li {
 	float:left;
 	padding:0px;
-	margin:0px;
-	padding-right:20px;
+	margin:0px;p
+	adding-right:20px;
 } /*menu horizontal, espace séparateur 20px*/ 
     
 nav ul li ul {
