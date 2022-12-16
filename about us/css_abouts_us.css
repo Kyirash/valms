@@ -30,3 +30,6 @@ aside{
     float: right;
     margin-right: 15px;
 }
+section.centre{
+    margin-left: 20%;
+}
